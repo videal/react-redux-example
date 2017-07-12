@@ -1,0 +1,10 @@
+export const PRICES_UPDATE = 'PRICES_UPDATE';
+export const SORT_RESULTS = 'SORT_RESULTS';
+
+export const OPEN_MODAL = 'OPEN_MODAL';
+export const CLOSE_MODAL = 'CLOSE_MODAL';
+
+
+export const GET_WEATHER_REQUEST = 'GET_WEATHER_REQUEST';
+export const GET_WEATHER_SUCCESS = 'GET_WEATHER_SUCCESS';
+export const GET_WEATHER_FAIL = 'GET_WEATHER_FAIL';

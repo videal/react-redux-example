@@ -1,17 +1,24 @@
 import React, { Component } from 'react'
-import storeInstance from './store_instance'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import initialStore from './initialStore'
 import Provider from './lib/provider'
-import AppContent from './comp/app_content'
+import AppContent from './comp/appContent'
+import Contacts from './comp/contacts'
+
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
-        {
-          // if a router is present you'll probably need to define the provider on every route unless you want to save in the store the current route path as well
-        }
-        <Provider store={storeInstance}>
-          <AppContent />
+        <Provider store={initialStore}>
+            <Router>
+                <Switch>
+                    <Route path="/dashboard" component={AppContent} />
+                    <Route path="/contacts" component={Contacts} />
+                    <Redirect from="/" to="dashboard" />
+                </Switch>
+            </Router>
         </Provider>
       </div>
     )

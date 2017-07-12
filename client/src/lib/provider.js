@@ -13,6 +13,6 @@ class Provider extends Component {
 
 Provider.childContextTypes = {
   store: PropTypes.object
-}
+};
 
 export default Provider

@@ -1,24 +1,53 @@
+@import url(../node_modules/bulma/css/bulma.css);
 .App {
-  text-align: center;
-}
+  text-align: center; }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+  height: 80px; }
 
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
-}
+  color: white; }
 
 .App-intro {
-  font-size: large;
-}
+  font-size: large; }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+.font-green {
+  color: darkgreen; }
+
+.font-red {
+  color: darkred; }
+
+.row-component .font-green {
+  color: #0e301a; }
+
+.weather-info {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 16px;
+  padding: 15px; }
+
+.modal {
+  display: flex; }
+  .modal .modal-bg {
+    width: 100%;
+    height: 100%;
+    background: darkgrey;
+    opacity: 0.5; }
+  .modal .modal-content {
+    position: absolute;
+    min-height: 250px;
+    overflow: hidden; }
+
+.contacts-notification {
+  margin-top: 50px; }
+
+/*# sourceMappingURL=index.css.map */

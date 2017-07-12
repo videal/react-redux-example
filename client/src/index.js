@@ -1,24 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './app'
-import store from './store_instance'
+import initialStore from './initialStore'
 import startup from './startup'
 import './index.css'
 
-const d = document
-const rootElement = d.querySelector('#root')
+import {updatePrices} from './actions/tableActions'
+
 
 const reactRender = () => {
-  ReactDOM.render(
-    <App />,
-    rootElement
-  )
-}
+    ReactDOM.render(
+        <App />,
+        document.getElementById('root')
+    )
+};
 
-reactRender()
+reactRender();
 
-store.subscribe((evt) =>
-  reactRender()
-)
+initialStore.subscribe(() => {
+        return reactRender()
+    }
+);
 
-startup()
+startup(initialStore, updatePrices);
