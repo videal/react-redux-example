@@ -44,3 +44,13 @@ npm start
 ```
 foreman start
 ```
+
+### Launch  the completed example
+```
+git checkout example-complete
+```
+
+### Notes
+
+There are several issues that need to be considered. Redux reducers and action creators are 'pure' functions.
+You should take care about it.
