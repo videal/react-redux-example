@@ -1,12 +1,18 @@
 require_relative 'env'
 
+
 module DataFetch
+
+  def owners_team
+    ["Adi", "Francesco", "Mario", "Mike", "Dan", "Katrina", "Kristina", "Peter", "Andy", "Vlad", "Aziza"]
+  end
+
   def data_fetch
     {
       example: [
-        { id: 1, price: 100 + rand(10), size: rand(10) },
-        { id: 2, price: 200 + rand(50), size: rand(10) },
-        { id: 3, price: 150 + rand(80), size: rand(10) },
+        { id: 1, price: 100 + rand(10), size: rand(10), owner: owners_team[rand(owners_team.length)] },
+        { id: 2, price: 200 + rand(50), size: rand(10), owner: owners_team[rand(owners_team.length)] },
+        { id: 3, price: 150 + rand(80), size: rand(10), owner: owners_team[rand(owners_team.length)] },
       ]
     }
   end
